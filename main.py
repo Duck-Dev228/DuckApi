@@ -34,11 +34,11 @@ def rawduck():
 
 @app.route('/pig')
 def pig():
-    return {"image":img("pig",20)},202
+    return {"image":img("pig",17)},202
 
 @app.route('/rawpig')
 def rawpig():
-    return render_template("rawduck__.html", user_image = img("pig",20))
+    return render_template("rawduck__.html", user_image = img("pig",17))
 
 @app.route('/cow')
 def cow():
@@ -87,5 +87,3 @@ def turkey():
 @app.route('/rawturkey')
 def rawturkey():
     return render_template("rawduck__.html", user_image = img("turkey bird"))
-
-
