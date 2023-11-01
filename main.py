@@ -1,11 +1,19 @@
 import requests
 import random
+import threading
 import time
 from flask import Flask, render_template
 
 headers = {
       'User-Agent': 'Mozilla/5.0 (X11; Linux i686 on x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.63 Safari/537.36'
 }
+
+def DontSleep():
+    print('duckquack')
+    time.sleep(5)
+
+dontsleep = threading.Thread(target=DontSleep,daemon=True)
+dontsleep.start()
 
 
 app = Flask(__name__)
@@ -25,57 +33,59 @@ def rawduck():
     return render_template("rawduck__.html", user_image = img("duck"))
 
 @app.route('/pig')
-def duck():
+def pig():
     return {"image":img("pig")},202
 
 @app.route('/rawpig')
-def rawduck():
+def rawpig():
     return render_template("rawduck__.html", user_image = img("pig"))
 
 @app.route('/cow')
-def duck():
+def cow():
     return {"image":img("cow")},202
 
 @app.route('/rawcow')
-def rawduck():
+def rawcow():
     return render_template("rawduck__.html", user_image = img("cow"))
 
 @app.route('/chicken')
-def duck():
+def chicken():
     return {"image":img("chicken")},202
 
 @app.route('/rawchicken')
-def rawduck():
+def rawchicken():
     return render_template("rawduck__.html", user_image = img("chicken"))
 
 @app.route('/cat')
-def duck():
+def cat():
     return {"image":img("cat")},202
 
 @app.route('/rawcat')
-def rawduck():
+def rawcat():
     return render_template("rawduck__.html", user_image = img("cat"))
 
 @app.route('/dog')
-def duck():
+def dog():
     return {"image":img("dog")},202
 
 @app.route('/rawdog')
-def rawduck():
+def rawdog():
     return render_template("rawduck__.html", user_image = img("dog"))
 
 @app.route('/goose')
-def duck():
+def goose():
     return {"image":img("goose")},202
 
 @app.route('/rawgoose')
-def rawduck():
+def rawgoose():
     return render_template("rawduck__.html", user_image = img("goose"))
 
 @app.route('/turkey')
-def duck():
+def turkey():
     return {"image":img("turkey bird")},202
 
 @app.route('/rawturkey')
-def rawduck():
+def rawturkey():
     return render_template("rawduck__.html", user_image = img("turkey bird"))
+
+
