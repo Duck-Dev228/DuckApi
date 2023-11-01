@@ -11,7 +11,7 @@ duck = requests.get(url='https://duckapi.onrender.com/duck').json()[image] # Url
 
 And you can see any random duck !
 
-###### [Duck](https://duckapi.onrender.com/rawduck)
+### [Duck](https://duckapi.onrender.com/rawduck)
 
 ##### Note: THIS IS HD DUCKS !!!!
 
