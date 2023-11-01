@@ -1,5 +1,4 @@
 import requests
-from bs4 import BeautifulSoup
 import random
 import time
 from flask import Flask, request, render_template, Response
