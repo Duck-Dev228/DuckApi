@@ -14,6 +14,15 @@ And you can see any random duck !
 
 ### [Duck](https://duckapi.onrender.com/rawduck)
 
+Also when api don`t working, try init it
+
+##### Python
+```py
+import requests
+requests.get(url='https://duckapi.onrender.com') # init Api
+```
+
+
 ##### Note: THIS IS HD DUCKS !!!!
 
 ## Also you can get: pig,cow,cat,dog,goose,turkey,chicken.
