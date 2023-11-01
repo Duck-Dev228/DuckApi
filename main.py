@@ -17,8 +17,8 @@ dontsleep.start()
 
 
 app = Flask(__name__)
-def img(name:str) -> str:
-    image_urls = requests.get(url=f'https://unsplash.com/napi/search/photos?page=30&per_page={random.randint(1,100)}&query={name}').json()
+def img(name:str,limit=100) -> str:
+    image_urls = requests.get(url=f'https://unsplash.com/napi/search/photos?page={random.randint(0,limit)}&per_page=20&query={name}').json()
     while True:
         url = random.choice(image_urls['results'])['urls']['full']
         if "photo" in url:
@@ -34,7 +34,7 @@ def rawduck():
 
 @app.route('/pig')
 def pig():
-    return {"image":img("pig")},202
+    return {"image":img("pig",)},202
 
 @app.route('/rawpig')
 def rawpig():
@@ -87,5 +87,4 @@ def turkey():
 @app.route('/rawturkey')
 def rawturkey():
     return render_template("rawduck__.html", user_image = img("turkey bird"))
-
 
