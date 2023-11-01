@@ -34,7 +34,7 @@ def rawduck():
 
 @app.route('/pig')
 def pig():
-    return {"image":img("pig",)},202
+    return {"image":img("pig")},202
 
 @app.route('/rawpig')
 def rawpig():
