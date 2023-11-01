@@ -22,6 +22,3 @@ def duck():
 @app.route('/rawduck')
 def rawduck():
     return render_template("rawduck__.html", user_image = getrandomduck())
-
-if __name__ == '__main__':
-    app.run()
