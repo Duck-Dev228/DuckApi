@@ -1,2 +1,10 @@
 # DuckApi
-This is api for random ducks and other !
+This is api for ducks.
+
+With this api, you can get any random ducks
+
+Python
+```py
+import requests
+duck = requests.get(url='https://duckapi.onrender.com/duck').json()[image] # Url to duck
+```
